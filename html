@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine Flow</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+    h2 {
+      color: #333;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+      border: none;
+      background-color: #ff69b4;
+      color: white;
+    }
+    button:hover {
+      background-color: #ff1493;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 id="text">Aslamoalaikum</h2>
+  <div id="buttons">
+    <button onclick="step1()">Walaikum Salam</button>
+    <button onclick="step1()">Hn</button>
+  </div>
+
+<script>
+  function step1() {
+    document.getElementById("text").innerText = "Ap kaisi ho?";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step2()">Theek hu</button>
+      <button onclick="step2()">Good</button>
+    `;
+  }
+
+  function step2() {
+    document.getElementById("text").innerText = "Socha ap udaas ho gi";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step3()">Yes</button>
+      <button onclick="step3()">No</button>
+    `;
+  }
+
+  function step3() {
+    document.getElementById("text").innerText = "lessssgo";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step4()">Next</button>
+    `;
+  }
+
+  function step4() {
+    document.getElementById("text").innerText = "Will you be my valentine?";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step5()">Yes</button>
+      <button onclick="step5()">No</button>
+    `;
+  }
+
+  function step5() {
+    document.getElementById("text").innerText = "Allah ap k naseeb bohat ache karen";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step6()">Ameen</button>
+    `;
+  }
+
+  function step6() {
+    document.getElementById("text").innerText = "Finalz k baad mile";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step7()">Yes</button>
+      <button onclick="step7()">No</button>
+    `;
+  }
+
+  function step7() {
+    document.getElementById("text").innerText =
+      "Kiu k ap ne yes pr click kia to ab to ap ko hi ana pare ga meri uni";
+    document.getElementById("buttons").innerHTML = `
+      <button onclick="step8()">Ok</button>
+      <button onclick="step9()">Ye kya</button>
+    `;
+  }
+
+  function step8() {
+    document.getElementById("text").innerText = "Deal done 😄";
+    document.getElementById("buttons").innerHTML = "";
+  }
+
+  function step9() {
+    document.getElementById("text").innerText =
+      "Tarasti hn nigahein, takti hn rahein, chahiye apna lu teri";
+    document.getElementById("buttons").innerHTML = "";
+  }
+</script>
+
+</body>
+</html>
